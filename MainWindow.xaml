@@ -1,0 +1,18 @@
+﻿<Window x:Class="GroupProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupProject"
+        mc:Ignorable="d"
+        Title="Water Mill Management" Height="1007" Width="1500" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" Icon="Final_logo_for_group_project.jpg">
+    <Grid Margin="0" d:LayoutOverrides="Width, Height">
+        <Rectangle Margin="479.091,10,478.182,0" Stroke="Black" Height="369" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Final_logo_for_group_project.jpg" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="button" Content="Login" Margin="564,421,530,385" Height="172" FontSize="72" FontWeight="Bold" FontStyle="Italic" Background="#FF818181" Click="button_Click"/>
+        <Button x:Name="Quit_Button" Content="Quit" Margin="564,0,530,125" Height="172" FontSize="72" FontWeight="Bold" FontStyle="Italic" Background="#FF818181" VerticalAlignment="Bottom" d:LayoutOverrides="Height" Click="Quit_Button_Click"/>
+    </Grid>
+</Window>

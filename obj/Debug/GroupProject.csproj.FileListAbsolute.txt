@@ -1,0 +1,16 @@
+c:\users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\bin\Debug\GroupProject.exe.config
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\bin\Debug\GroupProject.exe
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\bin\Debug\GroupProject.pdb
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.csprojResolveAssemblyReference.cache
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\MainWindow.g.cs
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\App.g.cs
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject_MarkupCompile.cache
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject_MarkupCompile.lref
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\MainWindow.baml
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.g.resources
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.Properties.Resources.resources
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.csproj.GenerateResource.Cache
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.exe
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.pdb
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Login.g.cs
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Login.baml
