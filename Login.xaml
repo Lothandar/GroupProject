@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GroupProject"
         mc:Ignorable="d"
-        Title="Login" Height="300" Width="300">
+        Title="Login" Height="1000" Width="1500" ResizeMode="NoResize" Icon="Final_logo_for_group_project.jpg">
     <Grid>
-        
+        <Rectangle Margin="479.091,10,478.182,0" Stroke="Black" Height="369" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Final_logo_for_group_project.jpg" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Fill="#FF818183" Margin="248.954,401.437,245.046,51.469" Stroke="Black" HorizontalAlignment="Center" Width="1000"/>
+        <Label x:Name="user_label" Content="UserName:" HorizontalAlignment="Left" Margin="336,467.5,0,443.5" Width="186" FontSize="36"/>
+        <Label x:Name="password_label" Content="Password:" HorizontalAlignment="Left" Height="60" Margin="336,0,0,346" VerticalAlignment="Bottom" Width="186" FontSize="36"/>
+        <PasswordBox x:Name="Password" Height="60" Margin="556.5,0,663,346" VerticalAlignment="Bottom" FontSize="36"/>
+        <TextBox x:Name="UserName" Margin="556.5,467.5,663,443.5" TextWrapping="Wrap" FontSize="36"/>
+        <Label x:Name="label1" Tag="Forget your password?" Height="42" Margin="738,0,510,77.5" VerticalAlignment="Bottom" FontSize="20" FontStyle="Italic" FontWeight="Bold">
+            <TextBlock TextDecorations="Underline" 
+               Text="{Binding Path=Tag, 
+                              RelativeSource={RelativeSource Mode=FindAncestor,
+                                                             AncestorType={x:Type Label}}}" RenderTransformOrigin="0.5,0.5" >
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.719"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Label>
+        <Button x:Name="Back_Button" Content="Button" HorizontalAlignment="Left" Margin="273,0,0,77.5" VerticalAlignment="Bottom" Width="123" Height="58.5" FontSize="36"/>
+        <Button x:Name="Submit_Button" Content="Submit" HorizontalAlignment="Right" Margin="0,0,271.5,77.5" VerticalAlignment="Bottom" Width="123" Height="58.5" FontSize="36" Click="Submit_Button_Click"/>
+
     </Grid>
 </Window>

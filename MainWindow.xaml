@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GroupProject"
         mc:Ignorable="d"
-        Title="Water Mill Management" Height="1007" Width="1500" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" Icon="Final_logo_for_group_project.jpg">
+        Title="Water Mill Management" Height="1000" Width="1500" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" Icon="Final_logo_for_group_project.jpg">
     <Grid Margin="0" d:LayoutOverrides="Width, Height">
         <Rectangle Margin="479.091,10,478.182,0" Stroke="Black" Height="369" VerticalAlignment="Top">
             <Rectangle.Fill>

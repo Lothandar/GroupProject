@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace GroupProject
 {
     /// <summary>
-    /// Logique d'interaction pour Login.xaml
+    /// Logique d'interaction pour MainMenu.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class MainMenu : Window
     {
-        public Login()
+        public MainMenu()
         {
             InitializeComponent();
-        }
-
-        private void Submit_Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainMenu MenuWindow = new MainMenu();
-            this.Hide();
-            MainMenu.Show();
         }
     }
 }
