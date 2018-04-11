@@ -14,3 +14,7 @@ C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProje
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.pdb
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Login.g.cs
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Login.baml
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\MainMenu.g.cs
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\MainMenu.baml
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\bin\Debug\MySql.Data.dll
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\bin\Debug\MySql.Data.xml

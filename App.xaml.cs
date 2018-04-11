@@ -13,5 +13,6 @@ namespace GroupProject
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }

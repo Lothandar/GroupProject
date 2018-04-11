@@ -32,6 +32,7 @@ namespace GroupProject
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            DatabaseManagement.DbInitialize();
             Login LoginWindow = new Login();
             this.Hide();
             LoginWindow.Show();
