@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GroupProject
+namespace GroupProject.Pages
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Index.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Index : UserControl
     {
-        public MainWindow()
+        public Index()
         {
             InitializeComponent();
         }
@@ -33,9 +33,7 @@ namespace GroupProject
         private void button_Click(object sender, RoutedEventArgs e)
         {
             DatabaseManagement.DbInitialize();
-            Login LoginWindow = new Login();
-            this.Hide();
-            LoginWindow.Show();
+            Switcher.Switch(new Login());
         }
     }
 }

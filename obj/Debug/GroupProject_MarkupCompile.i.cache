@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\App.xaml
-3-1556144813
+4894715814
 
-12-2024328977
+15-1779593140
 14-1919365986
-Login.xaml;MainMenu.xaml;MainWindow.xaml;
+Pages\Admin.xaml;Pages\Index.xaml;PageSwitcher.xaml;Pages\Login.xaml;
 
 False
 

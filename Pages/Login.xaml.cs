@@ -10,28 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GroupProject
+namespace GroupProject.Pages
 {
     /// <summary>
     /// Logique d'interaction pour Login.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Login : UserControl
     {
         List<string> list = new List<string>();
         public Login()
         {
             InitializeComponent();
         }
-
         private void Submit_Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             list = DatabaseManagement.LoginCommand(UserName.Text, Password.Password);
             //ErrorLabel.Content = "Connected Successfully ";
 
-            if(list.Count() == 0)
+            if (list.Count() == 0)
             {
                 ErrorLabel.Visibility = Visibility.Visible;
             }
@@ -56,7 +56,7 @@ namespace GroupProject
                     ErrorLabel.Content = "warehouse manager to be loged";
                 }
             }
-            
+
 
 
             /*if(!Connection)

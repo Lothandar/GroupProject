@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GroupProject
+namespace GroupProject.Pages
 {
     /// <summary>
-    /// Logique d'interaction pour MainMenu.xaml
+    /// Logique d'interaction pour Admin.xaml
     /// </summary>
-    public partial class MainMenu : Window
+    public partial class Admin : UserControl
     {
-        public MainMenu()
+        public Admin()
         {
             InitializeComponent();
         }
