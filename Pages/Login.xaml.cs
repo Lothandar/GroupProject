@@ -42,6 +42,7 @@ namespace GroupProject.Pages
                 if (list[2] == "administrator")
                 {
                     ErrorLabel.Content = "Admin to be loged";
+                    Switcher.Switch(new Admin());
                 }
                 if (list[2] == "executive")
                 {
