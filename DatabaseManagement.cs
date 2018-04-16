@@ -15,7 +15,7 @@ namespace GroupProject
 
         private static void DbInit() //Db Connection Method
         {
-            
+
             MySqlConnectionStringBuilder conn_string = new MySqlConnectionStringBuilder();
             conn_string.Server = "sql2.freemysqlhosting.net";
             conn_string.UserID = "sql2231281";
@@ -64,14 +64,14 @@ namespace GroupProject
             }
             catch (MySqlException ex)
             {
-               // MessageBox.Show(ex.Message);
+                // MessageBox.Show(ex.Message);
                 return false;
             }
         }
 
 
 
-        public static List<string> LoginCommand(string username,string password)
+        public static List<string> LoginCommand(string username, string password)
         {
             if (OpenConnection() == true)
             {
@@ -103,6 +103,64 @@ namespace GroupProject
             {
                 return null;
             }
+        }
+
+        public static List<string>[] SelectQuery(string Query)
+        {
+            if (OpenConnection() == true)
+            {
+                using (MySqlCommand cmd = conn.CreateCommand())
+                {
+                    MySqlDataReader reader;
+                    cmd.CommandText = string.Format("{0}", Query);
+                    //cmd.ExecuteNonQuery();
+                    reader = cmd.ExecuteReader();
+                    int count = reader.FieldCount;
+                    
+                    
+                    List<string> row = new List<string>();
+                    
+                    List<string>[] list = new List<string>[count];
+                    reader.Close();
+                    reader.Dispose();
+                    reader = cmd.ExecuteReader();
+                    for (int i = 0; i < count; i++)
+                    {
+                        list[i] = new List<string>();
+                    }
+                        while (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            row.Clear();
+                            for (int i = 0; i < count; i++)
+                            {
+                                list[i].Add(reader.GetValue(i).ToString());
+                            } 
+                        }
+                        reader.NextResult();
+                    }
+                    reader.Close();
+                    CloseConnection();
+                    return list;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public static void Update()
+        {
+
+        }
+        public static void Add()
+        {
+
+        }
+        public static void Delete()
+        {
+
         }
     }
 }

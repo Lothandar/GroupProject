@@ -18,3 +18,9 @@ C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProje
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.exe
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.pdb
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\GroupProject.csprojResolveAssemblyReference.cache
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Simple Styles.baml
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\Admin.g.cs
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\App.baml
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\Admin.baml
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\Exec.g.cs
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\Exec.baml

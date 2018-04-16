@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GroupProject.Pages"
-             mc:Ignorable="d" Height="407" Width="498">
+             mc:Ignorable="d" Height="1000" Width="1500">
     <Grid Background="White">
 
         <Button x:Name="button" Content="Login" Margin="172,245,176,118" FontSize="16" FontWeight="Bold" FontStyle="Italic" Background="#FF818181" Click="button_Click" d:LayoutOverrides="HorizontalAlignment"/>

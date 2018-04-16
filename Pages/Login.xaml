@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GroupProject.Pages"
-             mc:Ignorable="d" Height="974" Width="1466">
+             mc:Ignorable="d" Height="1000" Width="1500">
     <Grid>
         <Image x:Name="___GroupProject_component_Final_logo_for_group_project_jpg" Height="300" Margin="382,44.437,420,0" Source="/GroupProject;component/Final_logo_for_group_project.jpg" Stretch="Fill" VerticalAlignment="Top" Width="500"/>
         <Rectangle Fill="#FF818183" Margin="248.954,401.437,245.046,51.469" Stroke="Black" HorizontalAlignment="Center" Width="1000"/>

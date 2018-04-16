@@ -47,14 +47,17 @@ namespace GroupProject.Pages
                 if (list[2] == "executive")
                 {
                     ErrorLabel.Content = "Exec to be loged";
+                    Switcher.Switch(new Exec());
                 }
                 if (list[2] == "purchasing assistant")
                 {
                     ErrorLabel.Content = "purchasing assistant to be loged";
+                    //Switcher.Switch(new Assist());
                 }
                 if (list[2] == "warehouse manager")
                 {
                     ErrorLabel.Content = "warehouse manager to be loged";
+                    //Switcher.Switch(new Warehouse());
                 }
             }
 
