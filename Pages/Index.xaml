@@ -7,8 +7,8 @@
              mc:Ignorable="d" Height="1000" Width="1500">
     <Grid Background="White">
 
-        <Button x:Name="button" Content="Login" Margin="172,245,176,118" FontSize="16" FontWeight="Bold" FontStyle="Italic" Background="#FF818181" Click="button_Click" d:LayoutOverrides="HorizontalAlignment"/>
-        <Button x:Name="Quit_Button" Content="Quit" Margin="172,0,176,36" Height="44" FontSize="20" FontWeight="Bold" FontStyle="Italic" Background="#FF818181" VerticalAlignment="Bottom" Click="Quit_Button_Click" d:LayoutOverrides="HorizontalAlignment"/>
-        <Image x:Name="___GroupProject_component_Final_logo_for_group_project_jpg" Height="148" Margin="132,34,132,0" Source="/GroupProject;component/Final_logo_for_group_project.jpg" Stretch="Fill" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Login" Margin="619,0,638,267" FontSize="36" FontWeight="Bold" FontStyle="Italic" Background="#FF818181" Click="button_Click" Height="92" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment"/>
+        <Button x:Name="Quit_Button" Content="Quit" Margin="619,0,638,60" Height="92" FontSize="36" FontWeight="Bold" FontStyle="Italic" Background="#FF818181" VerticalAlignment="Bottom" Click="Quit_Button_Click" d:LayoutOverrides="HorizontalAlignment"/>
+        <Image x:Name="___GroupProject_component_Final_logo_for_group_project_jpg" Margin="126,40,138,431" Source="/GroupProject;component/Final_logo_for_group_project.jpg" Stretch="Fill"/>
     </Grid>
 </UserControl>

@@ -12,7 +12,10 @@
         <Button x:Name="Admin_Button" Content="Admin" HorizontalAlignment="Left" Height="54" Margin="10,0,0,40" VerticalAlignment="Bottom" Width="203" FontSize="24" Click="Admin_Button_Click"/>
         <Button x:Name="button1_Copy" Content="Submit" HorizontalAlignment="Right" Height="54" Margin="0,0,36,40" VerticalAlignment="Bottom" Width="203" FontSize="24"/>
         <ComboBox x:Name="SupplierListBox" HorizontalAlignment="Left" Height="66" Margin="186,96,0,0" VerticalAlignment="Top" Width="411" IsEditable="True" BorderThickness="1,1,1,0" SelectionChanged="SupplierListBox_SelectionChanged"/>
-        <DataGrid x:Name="SupplierData" Margin="104,268,218,214" SelectedIndex="2"/>
+        <DataGrid x:Name="SupplierData" Margin="104,268,218,286" SelectedIndex="2" IsReadOnly="True"/>
+        <Button x:Name="button" Content="Update supplier Table" HorizontalAlignment="Left" Height="46" Margin="104,0,0,198" VerticalAlignment="Bottom" Width="345" FontSize="22"/>
+        <Button x:Name="button_Copy" Content="Add a Supplier" Height="46" Margin="523,0,632,198" VerticalAlignment="Bottom" FontSize="22"/>
+        <Button x:Name="button_Copy1" Content="Delete a Supplier" Height="46" Margin="0,0,218,198" VerticalAlignment="Bottom" FontSize="22" HorizontalAlignment="Right" Width="345"/>
 
     </Grid>
 </UserControl>

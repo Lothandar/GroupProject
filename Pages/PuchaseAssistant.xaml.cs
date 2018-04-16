@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace GroupProject.Pages
 {
     /// <summary>
-    /// Logique d'interaction pour Admin.xaml
+    /// Logique d'interaction pour PuchaseAssistant.xaml
     /// </summary>
-    public partial class Admin : UserControl
+    public partial class PuchaseAssistant : UserControl
     {
-        public Admin()
+        public PuchaseAssistant()
         {
             InitializeComponent();
-        }
-
-        private void Logout_button_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new Index());
-        }
-
-        private void Executive_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new Exec());
         }
     }
 }

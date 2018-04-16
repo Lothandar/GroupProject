@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" Width="1500">
     <Grid>
-        <Image x:Name="___GroupProject_component_Final_logo_for_group_project_jpg" Height="66.666" Margin="0,10,10,0" Source="/GroupProject;component/Final_logo_for_group_project.jpg" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Right" Width="98"/>
-        <Button x:Name="Logout_button" Content="Logout" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" FontSize="11"/>
-        <Button x:Name="Submit_Button" Content="Submit" HorizontalAlignment="Right" Height="22" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="83.334"/>
-        <Button x:Name="Executive_Button" Content="Executive" HorizontalAlignment="Left" Height="22" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="70"/>
-        <Grid Margin="66.001,69.716,121.666,73.285">
+        <Image x:Name="___GroupProject_component_Final_logo_for_group_project_jpg" Height="276.666" Margin="0,10,10,0" Source="/GroupProject;component/Final_logo_for_group_project.jpg" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Right" Width="392"/>
+        <Button x:Name="Logout_button" Content="Logout" HorizontalAlignment="Left" Height="67.5" Margin="10,10,0,0" VerticalAlignment="Top" Width="176" FontSize="11" Click="Logout_button_Click"/>
+        <Button x:Name="Submit_Button" Content="Submit" HorizontalAlignment="Right" Height="54" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="113.334"/>
+        <Button x:Name="Executive_Button" Content="Executive" HorizontalAlignment="Left" Margin="10,0,0,10" Width="116" Click="Executive_Button_Click" Height="54" VerticalAlignment="Bottom"/>
+        <Grid Margin="132.001,173.666,543.666,383.335">
             <TreeView x:Name="treeView" Margin="0,27.999,0,0" Style="{DynamicResource SimpleTreeView}"/>
             <TextBox x:Name="textBox" Height="27.999" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="Orders Awaiting Authorisation" VerticalAlignment="Top" Background="#FFEAD827" BorderBrush="{x:Null}"/>
 

@@ -24,3 +24,5 @@ C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProje
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\Admin.baml
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\Exec.g.cs
 C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\Exec.baml
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\PuchaseAssistant.g.cs
+C:\Users\guillaume\documents\visual studio 2015\Projects\GroupProject\GroupProject\obj\Debug\Pages\PuchaseAssistant.baml

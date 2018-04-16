@@ -52,7 +52,7 @@ namespace GroupProject.Pages
                 if (list[2] == "purchasing assistant")
                 {
                     ErrorLabel.Content = "purchasing assistant to be loged";
-                    //Switcher.Switch(new Assist());
+                    Switcher.Switch(new PuchaseAssistant());
                 }
                 if (list[2] == "warehouse manager")
                 {
