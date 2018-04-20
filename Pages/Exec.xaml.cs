@@ -94,6 +94,16 @@ namespace GroupProject.Pages
                 {
                     string SelectedSupplier = SupplierListBox.SelectedItem.ToString();
                     SupplierData.ItemsSource = LoadCollectionData();
+
+                    Update.IsEnabled = true;
+                    Delete_Button.IsEnabled = true;
+
+                }
+                if (SupplierListBox.SelectedItem.ToString() == "Pick a Supplier")
+                {
+                    Update.IsEnabled = false;
+                    Delete_Button.IsEnabled = false;
+                    SupplierData.ItemsSource = null;
                 }
             }
             catch(Exception ex)
@@ -124,6 +134,8 @@ namespace GroupProject.Pages
             SupplierData.CanUserAddRows = true;
             SupplierData.CanUserDeleteRows = true;
             Update.IsEnabled = false;
+            Submit_Button.IsEnabled = true;
+            Cancel_Button.IsEnabled = true;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -134,23 +146,26 @@ namespace GroupProject.Pages
             SupplierData.CanUserDeleteRows = false;
             SupplierData.ItemsSource = LoadCollectionData();
             Update.IsEnabled = true;
+            Submit_Button.IsEnabled = false;
+            Cancel_Button.IsEnabled = false;
         }
 
         
 
         private void Submit_Button1(object sender, RoutedEventArgs e)
         {
-            SupplierListBox.IsEnabled = true;
-            SupplierData.IsReadOnly = true;
-            SupplierData.CanUserAddRows = false;
-            SupplierData.CanUserDeleteRows = false;
-            Update.IsEnabled = true;
 
             MessageBoxResult result = MessageBox.Show("All changes will be save and you won't be able to undo them. Are you sure?", "Supplier Update Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
             if (result == MessageBoxResult.Yes)
             {
                 //Update the database with the new values
-
+                SupplierListBox.IsEnabled = true;
+                SupplierData.IsReadOnly = true;
+                SupplierData.CanUserAddRows = false;
+                SupplierData.CanUserDeleteRows = false;
+                Update.IsEnabled = true;
+                Submit_Button.IsEnabled = false;
+                Cancel_Button.IsEnabled = false;
             }
 
 

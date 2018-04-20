@@ -72,9 +72,9 @@ namespace GroupProject.Pages
             if (CheapOrFast.SelectedItem.ToString() == "Pick an Item" && ItemsListBox.SelectedItem.ToString() == "Search for")
             {
                 string query = string.Empty;
-                if (ItemsData.HasItems)
+                if (ItemsData.HasItems)  //has to change the check has it's not going through then
                 {
-                    query = "Select * from supplierprice where supplierprice.itemid = garden.itemId  and supplierprice.supplierId = supplier.supplierID and supplier.suppliername= '"+ label.Content.ToString() +"' and garden.title = '"+ ItemsListBox.SelectedItem.ToString() +"'";
+                    query = "Select supplierprice.* from supplierprice, garden, supplier where supplierprice.itemid = garden.itemId and garden.itemId = (Select garden.itemId from garden where garden.title = '"+ label.Content.ToString() + "' and supplierprice.supplierID = supplier.supplierID and supplier.supplierID = (select supplier.supplierID from supplier where supplier.suppliername = '"+ ItemsListBox.SelectedItem.ToString() +"'";
                 }
                 else
                 {
