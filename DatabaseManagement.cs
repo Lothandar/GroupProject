@@ -105,7 +105,7 @@ namespace GroupProject
             }
         }
 
-        public static List<string>[] SelectQuery(string Query)
+        public static List<List<string>> SelectQuery(string Query)
         {
             if (OpenConnection() == true)
             {
@@ -116,30 +116,26 @@ namespace GroupProject
                     //cmd.ExecuteNonQuery();
                     reader = cmd.ExecuteReader();
                     int count = reader.FieldCount;
-                    
-                    
-                    List<string> row = new List<string>();
-                    
-                    List<string>[] list = new List<string>[count];
-                    reader.Close();
-                    reader.Dispose();
-                    reader = cmd.ExecuteReader();
-                    for (int i = 0; i < count; i++)
+
+
+
+
+                    List<List<string>> list = new List<List<string>>();
+                    while (reader.Read())
                     {
-                        list[i] = new List<string>();
-                    }
-                        while (reader.HasRows)
-                    {
-                        while (reader.Read())
+
+                        List<string> rowlist = new List<string>();
+                        list.Add(rowlist);
+                        
+                        //list[i] = new List<string>();
+                        // for each collumn 
+                        for (int i = 0; i < count; i++)
                         {
-                            row.Clear();
-                            for (int i = 0; i < count; i++)
-                            {
-                                list[i].Add(reader.GetValue(i).ToString());
-                            } 
+                            rowlist.Add(reader.GetValue(i).ToString());
                         }
-                        reader.NextResult();
-                    }
+ 
+                        }
+                        
                     reader.Close();
                     CloseConnection();
                     return list;
@@ -150,17 +146,53 @@ namespace GroupProject
                 return null;
             }
         }
-        public static void Update()
+        public static void Update(string query)
         {
+            
+            //Open connection
+            if (OpenConnection() == true)
+            {
+                //create mysql command
+                MySqlCommand cmd = new MySqlCommand();
+                //Assign the query using CommandText
+                cmd.CommandText = query;
+                //Assign the connection using Connection
+                cmd.Connection = conn;
 
+                //Execute query
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                CloseConnection();
+            }
         }
-        public static void Add()
+        public static void Add(string query)
         {
+            
 
+            //open connection
+            if (OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                CloseConnection();
+            }
         }
-        public static void Delete()
+        public static void Delete(string query)
         {
+        
 
+            if (OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+            }
         }
     }
 }

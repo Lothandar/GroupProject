@@ -20,7 +20,7 @@ namespace GroupProject.Pages
     /// </summary>
     public partial class Exec : UserControl
     {
-        SupplierItems supp = new SupplierItems();
+        
         public Exec()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace GroupProject.Pages
             
             SupplierListBox.Items.Add("Pick a Supplier");
             
-            List<string>[] list = DatabaseManagement.SelectQuery("Select supplierName from sql2231281.supplier");
+            List<List<string>> list = DatabaseManagement.SelectQuery("Select supplierName from sql2231281.supplier");
             if (list.Count() == 0)
             {
                 SupplierListBox.Items.Add("No supplier in the database");
@@ -47,7 +47,8 @@ namespace GroupProject.Pages
                 //SupplierListBox.Items.Add(list.Count());
             }
             SupplierListBox.SelectedItem = "Pick a Supplier";
-            
+            SupplierData.ItemsSource = LoadCollectionData();
+
         }
 
         private void Admin_Button_Click(object sender, RoutedEventArgs e)
@@ -60,6 +61,31 @@ namespace GroupProject.Pages
             Switcher.Switch(new Index());
         }
 
+        private List<SupplierItems> LoadCollectionData()
+        {
+            List<SupplierItems> SupplierItems = new List<SupplierItems>();
+            string query = "SELECT  supplierprice.itemId, supplierprice.currentPrice, supplier.deliveryDays FROM supplier JOIN supplierprice ON supplier.supplierID = supplierprice.supplierID WHERE supplierName = '" + SupplierListBox.SelectedItem.ToString()  + "'";
+            List<List<string>> supplierList = DatabaseManagement.SelectQuery(query);
+            if (supplierList.Count != 0)
+            {
+                foreach (List<string> list in supplierList)
+                {
+
+                    SupplierItems.Add(new SupplierItems()
+                    {
+
+                        ItemsID = long.Parse(list[0]),
+                        Price = double.Parse(list[1]),
+                        DeliveryTime = int.Parse(list[2])
+                    });
+
+
+
+                }
+            }
+            return SupplierItems;
+        }
+
         private void SupplierListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -67,9 +93,7 @@ namespace GroupProject.Pages
                 if (SupplierListBox.SelectedItem.ToString() != "" && SupplierListBox.SelectedItem.ToString() != "Pick a Supplier")
                 {
                     string SelectedSupplier = SupplierListBox.SelectedItem.ToString();
-                    string query = ("Select * from sql2231281.supplier WHERE supplierName ='" + SelectedSupplier + "'");
-                    List<string>[] supplierList = DatabaseManagement.SelectQuery(query);
-                    SupplierData.ItemsSource = supp.LoadCollectionData();
+                    SupplierData.ItemsSource = LoadCollectionData();
                 }
             }
             catch(Exception ex)
@@ -77,25 +101,74 @@ namespace GroupProject.Pages
 
             }
         }
+
+        private void Delete_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (SupplierListBox.SelectedItem.ToString() != "" && SupplierListBox.SelectedItem.ToString() != "Pick a Supplier")
+            {
+                MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this supplier?", "Supplier Delete Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+                if (result == MessageBoxResult.Yes)
+                {
+                    //delete supplier
+                    string query = "Delete from `supplier` WHERE supplierName = '" + SupplierListBox.SelectedItem.ToString() + "';";
+                    DatabaseManagement.Delete(query);
+                    MessageBox.Show("Supplier has been deleted succesfully", "Confirmation", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK);
+                }
+            }
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            SupplierListBox.IsEnabled = false;
+            SupplierData.IsReadOnly = false;
+            SupplierData.CanUserAddRows = true;
+            SupplierData.CanUserDeleteRows = true;
+            Update.IsEnabled = false;
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            SupplierListBox.IsEnabled = true;
+            SupplierData.IsReadOnly = true;
+            SupplierData.CanUserAddRows = false;
+            SupplierData.CanUserDeleteRows = false;
+            SupplierData.ItemsSource = LoadCollectionData();
+            Update.IsEnabled = true;
+        }
+
+        
+
+        private void Submit_Button1(object sender, RoutedEventArgs e)
+        {
+            SupplierListBox.IsEnabled = true;
+            SupplierData.IsReadOnly = true;
+            SupplierData.CanUserAddRows = false;
+            SupplierData.CanUserDeleteRows = false;
+            Update.IsEnabled = true;
+
+            MessageBoxResult result = MessageBox.Show("All changes will be save and you won't be able to undo them. Are you sure?", "Supplier Update Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+            if (result == MessageBoxResult.Yes)
+            {
+                //Update the database with the new values
+
+            }
+
+
+        }
+
+        private void button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            //add a supplier
+            string query = "INSERT INTO supplier (supplierName, postalCode, location, country, deliveryDays) VALUES" ;
+            DatabaseManagement.Add(query);
+        }
     }
     public class SupplierItems
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public int Price { get; set; }
+        public Int64 ItemsID { get; set; }
+        public double Price { get; set; }
         public int DeliveryTime { get; set; }
 
-        public List<SupplierItems> LoadCollectionData()
-        {
-            List<SupplierItems> SupplierItems = new List<SupplierItems>();
-            SupplierItems.Add(new SupplierItems()
-            {
-                ID = 101,
-                Name = "Mahesh Chand",
-            });
-
-
-            return SupplierItems;
-        }
+       
     }
 }

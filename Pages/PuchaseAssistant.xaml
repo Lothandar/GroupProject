@@ -5,8 +5,29 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GroupProject.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="1500">
+             d:DesignHeight="1000" d:DesignWidth="1500" Initialized="UserControl_Initialized">
     <Grid>
-            
+        <Image x:Name="___GroupProject_component_Final_logo_for_group_project_jpg" HorizontalAlignment="Right" Height="190.741" Margin="0,25.926,10,0" Source="/GroupProject;component/Final_logo_for_group_project.jpg" Stretch="Fill" VerticalAlignment="Top" Width="242.592"/>
+        <DataGrid x:Name="ItemsData" Margin="104,268,257,313" SelectedIndex="2" IsReadOnly="True"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="101.439" Margin="185,112.228,0,0" Stroke="Black" VerticalAlignment="Top" Width="366"/>
+        <Label x:Name="label" Content="Current Supplier" HorizontalAlignment="Left" Height="57.592" Margin="219.889,133.228,0,0" VerticalAlignment="Top" Width="289.111" FontSize="36"/>
+        <Rectangle Fill="#FFF4F4F5" Height="141.667" Margin="666,75,312,0" Stroke="Black" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Right" Height="57.592" Margin="0,159.075,312,0" VerticalAlignment="Top" Width="294" FontSize="25"/>
+        <Label x:Name="label1" Content="DeliveryDate" Height="57.592" Margin="666,159.075,645,0" VerticalAlignment="Top" FontSize="24"/>
+        <ComboBox x:Name="ItemsListBox" HorizontalAlignment="Left" Height="78" Margin="73,0,0,169" VerticalAlignment="Bottom" Width="366" IsEditable="True"/>
+        <Button x:Name="Add_button" Content="Add" HorizontalAlignment="Right" Height="78" Margin="0,0,399,169" VerticalAlignment="Bottom" Width="207" FontSize="36" Click="Add_button_Click"/>
+        <Button x:Name="button1" Content="Reset" HorizontalAlignment="Left" Height="63" Margin="39,0,0,43" VerticalAlignment="Bottom" Width="252" FontSize="36" Click="button1_Click"/>
+        <Button x:Name="Submit_Button" Content="Submit" HorizontalAlignment="Right" Height="63" Margin="0,0,51,43" VerticalAlignment="Bottom" Width="252" FontSize="36" Click="Submit_Button_Click"/>
+        <Grid HorizontalAlignment="Right" Height="165.332" Margin="0,0,51,178.568" VerticalAlignment="Bottom" Width="183">
+            <Rectangle Fill="#FFF4F4F5" Stroke="Black"/>
+            <Label x:Name="label2" Content="Total Price" Height="42" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontStyle="Italic" Background="#FFFFD100"/>
+            <Label x:Name="label2_Copy" Content="Total Price" Margin="0,42,0,81.332" FontSize="24" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black" Background="White" BorderThickness="0,2"/>
+            <Label x:Name="label2_Copy1" Content="VAT 20%" Height="42" Margin="0,0,0,40.666" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black" Background="White" BorderThickness="0,2"/>
+            <Label x:Name="label2_Copy2" Content="Total Price" Height="42" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black" Background="White" BorderThickness="0,2"/>
+
+        </Grid>
+        <Button x:Name="button1_Copy1" Content="Logout" HorizontalAlignment="Left" Height="63" Margin="39,25.926,0,0" VerticalAlignment="Top" Width="252" FontSize="36" Click="button1_Copy1_Click"/>
+        <ComboBox x:Name="CheapOrFast" Height="78" Margin="489,0,645,169" VerticalAlignment="Bottom"/>
+
     </Grid>
 </UserControl>
